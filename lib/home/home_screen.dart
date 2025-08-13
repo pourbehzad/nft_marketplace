@@ -64,8 +64,8 @@ class HomeScreen extends StatelessWidget {
                         top: 20,
                       ),
                       child: GlassmorphismWidget(
-                        width: 252,
-                        height: 168,
+                        width: 275,
+                        height: 185,
                         colorOpacity: 0.0,
                         borderOpacity: 0.9,
                         borderWidth: 0.9,
@@ -77,8 +77,8 @@ class HomeScreen extends StatelessWidget {
                               child: Image.asset(
                                 coverImages[index],
                                 fit: BoxFit.cover,
-                                width: 252,
-                                height: 168,
+                                width: 275,
+                                height: 185,
                               ),
                             ),
                             Positioned(
@@ -146,7 +146,7 @@ class ScrollableRow extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 27, bottom: 7, left: 14),
+          padding: const EdgeInsets.only(top: 32, bottom: 12, left: 14),
           child: Text(
             title,
             style: TextStyle(
@@ -165,8 +165,8 @@ class ScrollableRow extends StatelessWidget {
               return Padding(
                 padding: EdgeInsets.symmetric(horizontal: 4.5),
                 child: GlassmorphismWidget(
-                  width: 168,
-                  height: 198,
+                  width: 200,
+                  height: 240,
                   colorOpacity: 0.2,
                   borderOpacity: 0.5,
                   borderWidth: 0.9,
@@ -179,8 +179,8 @@ class ScrollableRow extends StatelessWidget {
                           borderRadius: BorderRadius.circular(20),
                           child: Image.asset(
                             imageList[index],
-                            width: 140,
-                            height: 140,
+                            width: 160,
+                            height: 160,
                             fit: BoxFit.cover,
                           ),
                         ),

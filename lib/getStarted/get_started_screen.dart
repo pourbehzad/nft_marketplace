@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:nft_marketplace/bottomNav/bottom_nav.dart';
 import 'package:nft_marketplace/getStarted/widget/glassmorphism_widget.dart';
 import 'package:nft_marketplace/home/home_screen.dart';
 
@@ -87,7 +88,7 @@ class GetStartedScreen extends StatelessWidget {
                                     Navigator.pushReplacement(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => HomeScreen(),
+                                        builder: (context) => BottomNav(),
                                       ),
                                     );
                                   },
