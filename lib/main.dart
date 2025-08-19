@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
           elevation: 0,
         ),
       ),
-      home: GetStartedScreen(),
+      home: GetStartedScreen(), 
     );
   }
 }
