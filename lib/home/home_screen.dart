@@ -33,95 +33,93 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-          title: Center(
-            child: Text(
-              'NFT Marketplace',
-              style: TextStyle(
-                fontFamily: 'SFPro Display',
-                fontWeight: FontWeight.w700,
-                fontSize: 25,
-                color: Colors.white,
-              ),
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(
+          child: Text(
+            'NFT Marketplace',
+            style: TextStyle(
+              fontFamily: 'SFPro Display',
+              fontWeight: FontWeight.w700,
+              fontSize: 25,
+              color: Colors.white,
             ),
           ),
         ),
-        body: SingleChildScrollView(
-          physics: BouncingScrollPhysics(),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: List.generate(coverImages.length, (index) {
-                    return Padding(
-                      padding: const EdgeInsets.only(
-                        right: 4,
-                        left: 4,
-                        top: 20,
-                      ),
-                      child: GlassmorphismWidget(
-                        width: 275,
-                        height: 185,
-                        colorOpacity: 0.0,
-                        borderOpacity: 0.9,
-                        borderWidth: 0.9,
-                        blur: 54,
-                        child: Stack(
-                          children: [
-                            ClipRRect(
-                              borderRadius: BorderRadius.circular(28),
-                              child: Image.asset(
-                                coverImages[index],
-                                fit: BoxFit.cover,
-                                width: 275,
-                                height: 185,
+      ),
+      body: SingleChildScrollView(
+        physics: BouncingScrollPhysics(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(
+                children: List.generate(coverImages.length, (index) {
+                  return Padding(
+                    padding: const EdgeInsets.only(
+                      right: 4,
+                      left: 4,
+                      top: 20,
+                    ),
+                    child: GlassmorphismWidget(
+                      width: 290,
+                      height: 195,
+                      colorOpacity: 0.0,
+                      borderOpacity: 0.9,
+                      borderWidth: 0.9,
+                      blur: 54,
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(28),
+                            child: Image.asset(
+                              coverImages[index],
+                              fit: BoxFit.cover,
+                              width: 275,
+                              height: 185,
+                            ),
+                          ),
+                          Positioned(
+                            bottom: 0,
+                            right: 0,
+                            left: 0,
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.only(
+                                bottomLeft: Radius.circular(28),
+                                bottomRight: Radius.circular(28),
+                              ),
+                              child: BackdropFilter(
+                                filter: ImageFilter.blur(
+                                  sigmaX: 8,
+                                  sigmaY: 8,
+                                ),
+                                child: Container(
+                                  height: 54,
+                                  alignment: Alignment.center,
+                                  child: Text(coverNames[index]),
+                                ),
                               ),
                             ),
-                            Positioned(
-                              bottom: 0,
-                              right: 0,
-                              left: 0,
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.only(
-                                  bottomLeft: Radius.circular(28),
-                                  bottomRight: Radius.circular(28),
-                                ),
-                                child: BackdropFilter(
-                                  filter: ImageFilter.blur(
-                                    sigmaX: 8,
-                                    sigmaY: 8,
-                                  ),
-                                  child: Container(
-                                    height: 54,
-                                    alignment: Alignment.center,
-                                    child: Text(coverNames[index]),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
+                          ),
+                        ],
                       ),
-                    );
-                  }),
-                ),
+                    ),
+                  );
+                }),
               ),
-              ScrollableRow(
-                title: 'Trending collections',
-                imageList: collectionImages,
-                nameList: collectionNames,
-              ),
-              ScrollableRow(
-                imageList: sellerImages,
-                nameList: sellerNames,
-                title: 'Top seller',
-              ),
-            ],
-          ),
+            ),
+            ScrollableRow(
+              title: 'Trending collections',
+              imageList: collectionImages,
+              nameList: collectionNames,
+            ),
+            ScrollableRow(
+              imageList: sellerImages,
+              nameList: sellerNames,
+              title: 'Top seller',
+            ),
+          ],
         ),
       ),
     );
@@ -167,9 +165,9 @@ class ScrollableRow extends StatelessWidget {
                 child: GlassmorphismWidget(
                   width: 200,
                   height: 240,
-                  colorOpacity: 0.2,
-                  borderOpacity: 0.5,
-                  borderWidth: 0.9,
+                  colorOpacity: 0.1,
+                  borderOpacity: 0.1,
+                  borderWidth: 1.1,
                   blur: 10,
                   child: Padding(
                     padding: const EdgeInsets.all(9.0),
